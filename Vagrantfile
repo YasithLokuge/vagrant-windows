@@ -5,6 +5,7 @@ Vagrant.configure("2") do |config|
   # Allow `vagrant rdp` through
   config.vm.network :forwarded_port, guest: 3389, host: 3389
   config.vm.communicator = "winrm"
+  config.vm.hostname="vagrant.windows"
   config.vm.provider "virtualbox" do |vb|
     vb.name = "windows-2012r2" 
     vb.memory = "1024"
